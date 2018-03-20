@@ -33,7 +33,7 @@
                   <caret line="32" column="3" lean-forward="false" selection-start-line="32" selection-start-column="3" selection-end-line="32" selection-end-column="3" />
 =======
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-          <file leaf-file-name="CommentList.js" pinned="false" current-in-tab="false">
+          <file leaf-file-name="CommentList.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/CommentList.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="324">
@@ -68,12 +68,17 @@
             <entry file="file://$PROJECT_DIR$/src/Comment.js">
               <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+                <state relative-caret-position="270">
+                  <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+=======
+<<<<<<< HEAD
                 <state relative-caret-position="510">
                   <caret line="45" column="11" lean-forward="true" selection-start-line="45" selection-start-column="11" selection-end-line="45" selection-end-column="11" />
 =======
                 <state relative-caret-position="361">
                   <caret line="21" column="31" lean-forward="false" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
 >>>>>>> 3da6a5a0a62112deb51c7c27df005aa0d6b37df7
+>>>>>>> 4085e80d376c5c45c09d2c97b7ef05c00b61e37e
                   <folding>
                     <element signature="e#0#37#0" expanded="true" />
                     <marker date="1521451873675" expanded="true" signature="1010:1441" ph="..." />
@@ -89,10 +94,14 @@
             <entry file="file://$PROJECT_DIR$/src/CommentInput.js">
               <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+                <state relative-caret-position="271">
+=======
+<<<<<<< HEAD
                 <state relative-caret-position="202">
                   <caret line="58" column="28" lean-forward="true" selection-start-line="58" selection-start-column="28" selection-end-line="58" selection-end-column="28" />
 =======
                 <state relative-caret-position="-53">
+>>>>>>> 4085e80d376c5c45c09d2c97b7ef05c00b61e37e
                   <caret line="48" column="14" lean-forward="true" selection-start-line="48" selection-start-column="14" selection-end-line="48" selection-end-column="14" />
 >>>>>>> 3da6a5a0a62112deb51c7c27df005aa0d6b37df7
                   <folding>
@@ -111,7 +120,7 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/index.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="90">
@@ -208,7 +217,34 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="ProjectPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="comment-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="comment-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="comment-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="comment-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="Scratches" />
     </panes>
   </component>
@@ -253,17 +289,25 @@
       <workItem from="1521096269325" duration="47911000" />
 =======
       <workItem from="1521096269325" duration="25940000" />
+<<<<<<< HEAD
+      <workItem from="1521262168947" duration="678000" />
+=======
       <workItem from="1521262168947" duration="69000" />
 >>>>>>> 3da6a5a0a62112deb51c7c27df005aa0d6b37df7
+>>>>>>> 4085e80d376c5c45c09d2c97b7ef05c00b61e37e
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
 <<<<<<< HEAD
+    <option name="totallyTimeSpent" value="26618000" />
+=======
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="47911000" />
 =======
     <option name="totallyTimeSpent" value="26009000" />
 >>>>>>> 3da6a5a0a62112deb51c7c27df005aa0d6b37df7
+>>>>>>> 4085e80d376c5c45c09d2c97b7ef05c00b61e37e
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -417,6 +461,9 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/Comment.js">
+=======
     <entry file="file://$PROJECT_DIR$/src/CommentList.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
@@ -429,6 +476,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CommentApp.js">
+>>>>>>> 4085e80d376c5c45c09d2c97b7ef05c00b61e37e
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
         <state relative-caret-position="268">
@@ -444,6 +492,22 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CommentApp.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+=======
     <entry file="file://$PROJECT_DIR$/src/CommentInput.js">
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
@@ -453,6 +517,7 @@
         <state relative-caret-position="361">
           <caret line="21" column="31" lean-forward="false" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
 >>>>>>> 3da6a5a0a62112deb51c7c27df005aa0d6b37df7
+>>>>>>> 4085e80d376c5c45c09d2c97b7ef05c00b61e37e
           <folding>
             <element signature="e#0#37#0" expanded="true" />
             <marker date="1521451137589" expanded="true" signature="1178:1966" ph="..." />
@@ -471,10 +536,14 @@
     <entry file="file://$PROJECT_DIR$/src/Comment.js">
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+        <state relative-caret-position="271">
+=======
+<<<<<<< HEAD
         <state relative-caret-position="510">
           <caret line="45" column="11" lean-forward="true" selection-start-line="45" selection-start-column="11" selection-end-line="45" selection-end-column="11" />
 =======
         <state relative-caret-position="-53">
+>>>>>>> 4085e80d376c5c45c09d2c97b7ef05c00b61e37e
           <caret line="48" column="14" lean-forward="true" selection-start-line="48" selection-start-column="14" selection-end-line="48" selection-end-column="14" />
 >>>>>>> 3da6a5a0a62112deb51c7c27df005aa0d6b37df7
           <folding>
@@ -487,12 +556,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
+    <entry file="file://$PROJECT_DIR$/src/CommentList.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state relative-caret-position="324">
+          <caret line="18" column="8" lean-forward="false" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#0#37#0" expanded="true" />
           </folding>
         </state>
       </provider>
