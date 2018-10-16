@@ -1,57 +1,31 @@
-import React,{Component} from 'react'
-import Comment from './Comment'
-import PropTypes from 'prop-types'
+/**
+ * Created by Anno59 on 2018.10.13.
+ */
+import React,{Component} from 'react';
+import Comment from './Comment';
 
 class CommentList extends Component{
-	static propTypes = {
-		comments: PropTypes.array,
-		onDeleteComment: PropTypes.func
-	};
-
-	static defaultProps = {
-		comments: []
-	};
-
-	componentWillMount(){
-
-	}
-
-	componentDidMount(){
-		console.log('mount',this.props.children)
-	}
-
-	componentWillUnmount(){
-
-	}
-
-	handleDeleteComment(index){
-		this.props.onDeleteComment(index);
-		// console.log(index);
-	}
-
-	render(){
-		return (
-			<div>
-				{
-					this.props.comments.map((e,index)=>
-						 <Comment
-							comment={e}
-							key={index}
-							index={index}
-							onDeleteComment={this.handleDeleteComment.bind(this)}/>
-					)
-				}
-			</div>
-		)
-	}
+    constructor(){
+        super();
+        this.state = {
+            comments:[]
+        }
+    }
+    static defaultProps = {
+			comments:[]
+    }
+    render(){
+			// if (this.props.comments.hasOwnProperty('username')) {
+			// 	this.state.comments.push(this.props.comments)
+			// }
+			return(
+        <div>
+            {this.props.comments.map((comment, i) =>
+                <Comment comment={comment} key={i} />
+            )}
+        </div>
+      )
+    }
 }
-// {
-// 	this.props.comments.map(function(e,index){
-// 		return <Comment
-// 			comment={e}
-// 			key={index}
-// 			index={index}
-// 			onDeleteComment={this.handleDeleteComment.bind(this)}/>
-// 	})
-// }
+
 export default CommentList;
