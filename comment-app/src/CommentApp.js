@@ -20,10 +20,7 @@ class CommentApp extends Component{
       this.setState({
 				comment :this.state.comment
       })
-      // this.setState({
-				// comment :comment
-      // })
-		}
+    }
     render(){
         return(
             <div className="wrapper">
