@@ -10,11 +10,33 @@ class CommentInput extends Component{
         //     content:this.state.content
         // }
     };
+
     constructor(){
         super();
         this.state = {
             username:'',
-            content:''
+            content:'',
+            loaded:false,
+        }
+    }
+
+    componentWillMount(){
+        this._loadUserName();
+    }
+
+    componentDidMount(){
+        this.textarea.focus();
+    }
+
+    _saveUserName(){
+        let username = this.state.username;
+        localStorage.setItem('username',username);
+    }
+
+    _loadUserName(){
+        let username = localStorage.getItem('username');
+        if(username != ''){
+            this.setState({username})
         }
     }
     componentDidMount(){
@@ -46,9 +68,11 @@ class CommentInput extends Component{
             content:content
         })
     }
+
     handleSubmitChange(e){
         const {username,content} = this.state;
         this.props.comment({username,content});
+        this._saveUserName();
         this.setState({
             content:''
         })
@@ -57,6 +81,7 @@ class CommentInput extends Component{
     handleTextareaFocus(){
         this.textarea.focus();
     }
+
     render(){
         return(
             <div className='comment-input'>
