@@ -10,6 +10,11 @@ class Comment extends Component{
     //         content:''
     //     }
     // }
+    // constructor(){
+    //     super();
+    //      this.props.comment.data;
+    // }
+
     render(){
         return(
           <div className='comment'>
@@ -17,6 +22,10 @@ class Comment extends Component{
                   <span>{this.props.comment.username} </span>：
               </div>
               <p>{this.props.comment.content}</p>
+              <span className='comment-createdtime'>
+                {this.props.comment.date}
+                {/*{this.state.date}*/}
+              </span>
           </div>
         )
     }

@@ -13,14 +13,33 @@ class CommentApp extends Component{
       }
     }
 
-    handleInputComment(comment){
-			if (!comment.username) return alert('请输入用户名');
-			if (!comment.content) return alert('请输入评论内容');
-			this.state.comment.push(comment);
-      this.setState({
-				comment :this.state.comment
-      })
+    _saveCommentList(){
+        let commentList = this.state.comment;
+        localStorage.setItem('commentList',JSON.stringify(commentList));
     }
+
+    _loadCommentList(){
+        let commentList = localStorage.getItem('commentList');
+        commentList = commentList ? JSON.parse(commentList) : [];
+        this.setState({
+            comment :commentList
+        })
+    }
+
+    componentWillMount(){
+        this._loadCommentList();
+    }
+
+    handleInputComment(comment){
+        if (!comment.username) return alert('请输入用户名');
+        if (!comment.content) return alert('请输入评论内容');
+        this.state.comment.push(comment);
+        this.setState({
+            comment :this.state.comment
+        })
+        this._saveCommentList();
+    }
+
     render(){
         return(
             <div className="wrapper">
