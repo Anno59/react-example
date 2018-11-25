@@ -17,14 +17,31 @@ class CommentInput extends Component{
             content:''
         }
     }
+    componentDidMount(){
+        this._loadUsername();
+        this.handleTextareaFocus();
+    }
+    _saveUsername(username){
+        localStorage.setItem('username' , username)
+    }
+    _loadUsername(){
+        const username = localStorage.getItem('username');
+        if(username != null){
+            this.setState({username})
+        }
+    }
     handleUsernameChange(e){
         let username = e.target.value;
         this.setState({
             username:username,
         })
     }
+    handleUsernameBlur(event){
+        this._saveUsername(event.target.value);
+    }
     handleTextareaChange(e){
         let content = e.target.value;
+        // console.log('%c%s','color:#f00',content)
         this.setState({
             content:content
         })
@@ -33,8 +50,12 @@ class CommentInput extends Component{
         const {username,content} = this.state;
         this.props.comment({username,content});
         this.setState({
-          content:''
+            content:''
         })
+        this.handleTextareaFocus();
+    }
+    handleTextareaFocus(){
+        this.textarea.focus();
     }
     render(){
         return(
@@ -42,13 +63,13 @@ class CommentInput extends Component{
                 <div className='comment-field'>
                     <span className='comment-field-name'>用户名：</span>
                     <div className='comment-field-input'>
-                        <input onChange={this.handleUsernameChange.bind(this)} value={this.state.username}/>
+                        <input onBlur={this.handleUsernameBlur.bind(this)} onChange={this.handleUsernameChange.bind(this)} value={this.state.username}/>
                     </div>
                 </div>
                 <div className='comment-field'>
                     <span className='comment-field-name'>评论内容：</span>
                     <div className='comment-field-input'>
-                        <textarea onChange={this.handleTextareaChange.bind(this)} value={this.state.content}></textarea>
+                        <textarea ref={(textarea) => this.textarea = textarea} onChange={this.handleTextareaChange.bind(this)} value={this.state.content}></textarea>
                     </div>
                 </div>
                 <div className='comment-field-button'>
