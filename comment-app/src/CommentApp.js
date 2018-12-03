@@ -26,24 +26,17 @@ class CommentApp extends Component{
         })
     }
 
-    refreshCommentTime(){
-        setInterval(()=>{
-            this._loadCommentList();
-        },1000)
-    }
-
     componentWillMount(){
         this._loadCommentList();
-        this.refreshCommentTime();
     }
 
-    handleInputComment(comment){
-        if (!comment.username) return alert('请输入用户名');
-        if (!comment.content) return alert('请输入评论内容');
-        this.state.comment.push(comment);
-        this.setState({
-            comment :this.state.comment
-        })
+    handleInputComment(comments){
+        if (!comments) return;
+        if (!comments.username) return alert('请输入用户名');
+        if (!comments.content) return alert('请输入评论内容');
+        const comment = this.state.comment;
+        comment.push(comments);
+        this.setState({comment});
         this._saveCommentList();
     }
 

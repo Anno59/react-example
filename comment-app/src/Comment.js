@@ -16,8 +16,11 @@ class Comment extends Component{
              date : ''
          }
     }
-    componentWillReceiveProps(){
-        this._formatDateTime();
+
+    _refreshCommentTime(){
+        setInterval(()=>{
+            this._formatDateTime();
+        },1000)
     }
 
     _formatDateTime(){
@@ -33,8 +36,12 @@ class Comment extends Component{
         // console.log(intervalTime)
         // console.log(unit)
         this.setState({
-            date : (intervalTime + unit)
+            date : `${intervalTime}${unit}`
         })
+    }
+
+    componentWillMount(){
+        this._refreshCommentTime();
     }
 
     render(){
