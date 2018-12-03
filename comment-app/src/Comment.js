@@ -19,7 +19,7 @@ class Comment extends Component{
     }
 
     _refreshCommentTime(){
-        setInterval(()=>{
+        this._timer = setInterval(()=>{
             this._formatDateTime();
         },1000)
     }
@@ -50,6 +50,10 @@ class Comment extends Component{
 
     componentWillMount(){
         this._refreshCommentTime();
+    }
+
+    componentWillUnmount(){
+        clearInterval(this._timer)
     }
 
     render(){
