@@ -17,16 +17,16 @@ class CommentList extends Component{
     }
 
     render(){
-			// if (this.props.comments.hasOwnProperty('username')) {
-			// 	this.state.comments.push(this.props.comments)
-			// }
-			return(
-        <div>
-            {this.props.comments.map((comment, i) =>
-                <Comment comment={comment} key={i} />
-            )}
-        </div>
-      )
+        // if (this.props.comments.hasOwnProperty('username')) {
+        // 	this.state.comments.push(this.props.comments)
+        // }
+        return(
+            <div>
+                {this.props.comments.map((comment, i) =>
+                    <Comment comment={comment} key={i} />
+                )}
+            </div>
+        )
     }
 }
 
