@@ -10,10 +10,32 @@ class Comment extends Component{
     //         content:''
     //     }
     // }
-    // constructor(){
-    //     super();
-    //      this.props.comment.data;
-    // }
+    constructor(){
+        super();
+         this.state = {
+             date : ''
+         }
+    }
+    componentWillReceiveProps(){
+        this._formatDateTime();
+    }
+
+    _formatDateTime(){
+        let commentDate = this.props.comment.date;
+        let intervalTime = parseInt((+new Date() - commentDate) / 1000);
+        let unit;
+        if(intervalTime < 60){
+            unit = '秒前'
+        }else if(intervalTime >= 60){
+            intervalTime  = parseInt(intervalTime / 60);
+            unit = '分前'
+        }
+        // console.log(intervalTime)
+        // console.log(unit)
+        this.setState({
+            date : (intervalTime + unit)
+        })
+    }
 
     render(){
         return(
@@ -23,8 +45,7 @@ class Comment extends Component{
               </div>
               <p>{this.props.comment.content}</p>
               <span className='comment-createdtime'>
-                {this.props.comment.date}
-                {/*{this.state.date}*/}
+                  {this.state.date}
               </span>
           </div>
         )
