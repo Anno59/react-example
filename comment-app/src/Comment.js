@@ -43,9 +43,6 @@ class Comment extends Component{
 
     _formatContentCode(content){
         return content.replace(/`([\s|\S]*)`/g,'<code>$1</code>');;
-        // this.setState({
-        //     content:content
-        // })
     }
 
     componentWillMount(){
