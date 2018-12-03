@@ -16,11 +16,15 @@ class CommentList extends Component{
         }
     }
 
+    handleClickDelete(element){
+        this.props.handleDelete(element);
+    }
+
     render(){
         return(
             <div>
                 {this.props.comments.map((comment, i) =>
-                    <Comment comment={comment} key={i} />
+                    <Comment comment={comment} key={i} index={i} handleDelete={this.handleClickDelete.bind(this)} />
                 )}
             </div>
         )

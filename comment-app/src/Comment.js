@@ -4,12 +4,13 @@
 import React,{Component} from 'react';
 
 class Comment extends Component{
-    // static defaultProps = {
-    //     comment:{
-    //         username:'',
-    //         content:''
-    //     }
-    // }
+    static defaultProps = {
+        comment:{
+            username:'',
+            content:''
+        }
+    }
+
     constructor(){
         super();
          this.state = {
@@ -40,19 +41,30 @@ class Comment extends Component{
         })
     }
 
+    _formatContentCode(content){
+        return content.replace(/`([\s|\S]*)`/g,'<code>$1</code>');;
+        // this.setState({
+        //     content:content
+        // })
+    }
+
     componentWillMount(){
         this._refreshCommentTime();
     }
 
     render(){
+        const {comment} = this.props; //解构
         return(
           <div className='comment'>
               <div className='comment-user'>
-                  <span>{this.props.comment.username} </span>：
+                  <span>{comment.username} </span>：
               </div>
-              <p>{this.props.comment.content}</p>
+              <p dangerouslySetInnerHTML={{__html: this._formatContentCode(comment.content)}}></p>
               <span className='comment-createdtime'>
                   {this.state.date}
+              </span>
+              <span index={this.props.index} className='comment-delete' onClick={this.props.handleDelete} >
+                  删除
               </span>
           </div>
         )

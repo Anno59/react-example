@@ -17,15 +17,6 @@ class CommentInput extends Component{
         }
     }
 
-    componentWillMount(){
-        this._loadUsername();
-    }
-
-    componentDidMount(){
-        this._loadUsername();
-        this.handleTextareaFocus();
-    }
-
     _saveUsername(username){
         localStorage.setItem('username' , username)
     }
@@ -35,6 +26,15 @@ class CommentInput extends Component{
         if(username != null){
             this.setState({username})
         }
+    }
+
+    componentWillMount(){
+        this._loadUsername();
+    }
+
+    componentDidMount(){
+        this._loadUsername();
+        this.handleTextareaFocus();
     }
 
     handleUsernameChange(e){

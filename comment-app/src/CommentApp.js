@@ -26,9 +26,25 @@ class CommentApp extends Component{
         })
     }
 
+    _deleteCommentList(element){
+        let commentList = localStorage.getItem('commentList');
+        commentList = commentList ? JSON.parse(commentList) : [];
+        // console.log(commentList);
+        const index = element.target.getAttribute('index');
+        commentList.splice(index,1);
+        this.setState({
+            comment :commentList
+        },()=>{
+            this._saveCommentList(); //setState后调用保存方法
+        });
+    }
+
     componentWillMount(){
         this._loadCommentList();
     }
+
+    // componentWillUnmount(){
+    // }
 
     handleInputComment(comments){
         if (!comments) return;
@@ -44,7 +60,7 @@ class CommentApp extends Component{
         return(
             <div className="wrapper">
                 <CommentInput comment={this.handleInputComment.bind(this)}/>
-                <CommentList comments={this.state.comment}/>
+                <CommentList comments={this.state.comment} handleDelete={this._deleteCommentList.bind(this)}/>
             </div>
         )
     }
