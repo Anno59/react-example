@@ -4,12 +4,14 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import InputWithUserName from './InputWithUserName';
+import TextareaWithContent from './TextareaWithContent';
 
 class Index extends Component{
     render(){
         return(
             <div>
                 用户名: <InputWithUserName/>
+                内容: <TextareaWithContent />
             </div>
         )
     }
