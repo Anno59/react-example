@@ -2,50 +2,54 @@
  * Created by Anno59 on 2018.10.13.
  */
 import React,{Component} from 'react';
+import wrapWithLoadData from './wrapWithLoadData.js'
 
 class CommentInput extends Component{
     // static defaultProps = {
         // commentList:[]
     // };
 
-    constructor(){
-        super();
+    constructor (props) {
+        // console.log(props)
+        super(props)
         this.state = {
-            username:'',
-            content:'',
-            loaded:false,
+            username: props.data,
+            content: ''
         }
     }
+    // _saveUsername(username){
+    //     localStorage.setItem('username' , JSON.stringify(username));
+    // }
 
-    _saveUsername(username){
-        localStorage.setItem('username' , username)
-    }
+    // _loadUsername(){
+    //     const username = localStorage.getItem('username');
+    //     if(username != null){
+    //         this.setState({username})
+    //     }
+    // }
 
-    _loadUsername(){
-        const username = localStorage.getItem('username');
-        if(username != null){
-            this.setState({username})
-        }
-    }
-
-    componentWillMount(){
-        this._loadUsername();
-    }
+    // componentWillMount(){
+    //     console.log(1)
+        // this.props.loadData().bind(this);
+        // this._loadUsername();
+    // }
 
     componentDidMount(){
-        this._loadUsername();
+        // this.props.loadData();
+        // this._loadUsername();
         this.handleTextareaFocus();
     }
 
     handleUsernameChange(e){
         let username = e.target.value;
         this.setState({
-            username:username,
+            username
         })
     }
 
     handleUsernameBlur(event){
-        this._saveUsername(event.target.value);
+        this.props.saveData(event.target.value);
+        // this._saveUsername(event.target.value);
     }
 
     handleTextareaChange(e){
@@ -59,6 +63,7 @@ class CommentInput extends Component{
     handleSubmitChange(e){
         const {username,content} = this.state;
         const date = +new Date();
+        // console.log(username)
         this.props.comment({username,content,date});
         this.setState({
             content:''
@@ -71,6 +76,7 @@ class CommentInput extends Component{
     }
 
     render(){
+        console.log(this.state.username)
         return(
             <div className='comment-input'>
                 <div className='comment-field'>
@@ -94,5 +100,7 @@ class CommentInput extends Component{
         )
     }
 }
+
+CommentInput = wrapWithLoadData(CommentInput,'username');
 
 export default CommentInput;
