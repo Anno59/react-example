@@ -16,7 +16,14 @@ class CommentInput extends Component{
             username: props.data,
             content: ''
         }
+        console.log(this.state)
     }
+
+    saveData(data){
+        // console.log(this);
+        localStorage.setItem(JSON.stringify(data))
+    }
+
     // _saveUsername(username){
     //     localStorage.setItem('username' , JSON.stringify(username));
     // }

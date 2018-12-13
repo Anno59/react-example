@@ -7,20 +7,20 @@ const wrapWithLoadData = (WrappedComponent,name) => {
     return class extends Component{
         constructor(){
             super();
-            console.log(this);
+            // console.log(this);
             this.state = {
                 data:null,
             }
         }
 
         saveData(data){
-            console.log(this);
+            // console.log(this);
             localStorage.setItem(name,JSON.stringify(data))
         }
 
         // loadData(){
         componentWillMount(){
-            console.log(this)
+            // console.log(this)
             let data = localStorage.getItem(name);
             try{
                 data = JSON.parse(data)
@@ -34,6 +34,8 @@ const wrapWithLoadData = (WrappedComponent,name) => {
         }
 
         render(){
+            console.log(this.state);
+            console.log(this.saveData);
             console.log(this);
             // const props = {
             //     loadData : this.loadData.bind(this),
