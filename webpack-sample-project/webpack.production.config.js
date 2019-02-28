@@ -5,7 +5,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    devtool : 'eval-source-map',
+    devtool : 'null',
     entry:__dirname + '/app/main.js',
     output : {
         path : __dirname + '/public',
@@ -29,16 +29,16 @@ module.exports = {
             {
                 test: /\.css$/,
                 use:[{
-                        loader:'style-loader'
-                    },{
-                        loader:'css-loader',
-                        options:{
-                            modules:true,
-                            localIdentName:'[name]__[local]--[hash:base64:5]'
-                        }
-                    },{
-                        loader: 'postcss-loader'
+                    loader:'style-loader'
+                },{
+                    loader:'css-loader',
+                    options:{
+                        modules:true,
+                        localIdentName:'[name]__[local]--[hash:base64:5]'
                     }
+                },{
+                    loader: 'postcss-loader'
+                }
                 ]
             }
         ]

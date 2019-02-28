@@ -13,5 +13,5 @@ class Greeter extends Component{
         );
     }
 }
-
+console.log('ggs')
 export default Greeter
