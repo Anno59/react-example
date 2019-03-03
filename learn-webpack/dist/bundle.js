@@ -71,7 +71,7 @@ __webpack_require__(1);
 // 通过 CommonJS 规范导入 show 函数
 const show = __webpack_require__(6);
 // 执行 show 函数
-show('Webpack');
+show('Webpack1');
 
 /***/ }),
 /* 1 */
@@ -94,8 +94,8 @@ if(content.locals) module.exports = content.locals;
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!./node_modules/css-loader/index.js??ref--0-1!./main.css", function() {
-			var newContent = require("!!./node_modules/css-loader/index.js??ref--0-1!./main.css");
+		module.hot.accept("!!./node_modules/css-loader/index.js?minimize!./main.css", function() {
+			var newContent = require("!!./node_modules/css-loader/index.js?minimize!./main.css");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -113,7 +113,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "#app{text-align:center}", ""]);
+exports.push([module.i, "#app{height:8px}", ""]);
 
 // exports
 
@@ -660,7 +660,7 @@ module.exports = function (css) {
 
 // 操作 DOM 元素，把 content 显示到网页上
 function show(content) {
-    window.document.getElementById('app').innerText = 'Hello,' + content;
+    window.document.getElementById('app').innerText = 'Hell,' + content;
 }
 
 // 通过 CommonJS 规范导出 show 函数
